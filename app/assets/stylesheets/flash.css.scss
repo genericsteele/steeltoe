@@ -1,0 +1,26 @@
+@import 'colors';
+
+.flash{
+  font-weight: bold;
+  font-size: 1.3em;
+  > * {
+    padding: 10px;
+  }
+  &.notice{
+    background-color: $green;
+    text-shadow: 1px 1px 1px $dark-green; 
+    color: $white;
+    border-bottom: 2px $dark-green;
+  }
+  &.alert{
+    background-color: $yellow;
+    text-shadow: 1px 1px 1px $tangerine;
+    border-bottom: 2px $tangerine;
+  }
+  &.error{
+    background-color: $red;
+    text-shadow: 1px 1px 1px $dark_red;
+    color: white;
+    border-bottom: 2px $dark_red;
+  }
+}

@@ -1,0 +1,51 @@
+@import 'colors';
+
+form{
+  padding: 0 10%;
+  div{
+    label{
+      display: inline-block;
+      width: 13%;
+      text-align: right;
+      font-size: 1.2em;
+      margin-right: 8px;
+    }
+    input[type='text'], input[type='email'], input[type='password'], select, textarea{
+      display: inline-block;
+      margin-right: 20%;
+      width: 50%;
+      text-align: left;
+      margin: 7px 20% 7px 0;
+      font-size: 1.2em;
+      padding: 5px;
+      border: none;
+      border-radius: 7px;
+    }
+    textarea{
+      min-height: 150px;
+      width: 60%;
+    }
+    select{
+      border: 1px solid $light-gray;
+      width: 52%;
+    }
+    &.error{
+      color: $red;
+      input, select, textarea{
+        border: 1px solid $red;
+        color: $red;
+      }
+    }
+    &.success{
+      color: $green;
+      input, select, textarea{
+        border: 1px solid $green;
+        color: green;
+      }
+    }
+  }
+  div.actions{
+    margin-left: 15%;
+    text-align: left;
+  }
+}

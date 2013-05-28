@@ -1,0 +1,60 @@
+@import "colors";
+
+input[type="button"], input[type="submit"], button, a.button{
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 1.2em !important;
+  background-color: $light_gray;
+  border: none;
+  color: $midnight;
+  &:hover{
+    background-color: $dark-gray;
+  }
+  &.primary{
+    background-color: $dark-blue; 
+    color: $white;
+    &:hover{
+      background-color: $blue;
+    }
+  }
+  &.secondary{
+    background-color: $white;
+    color: $black;
+    &:hover{
+      background-color: $light_gray;
+    }
+  }
+  &.green{
+    background-color: $green;
+    color: $white;
+    text-shadow: 1px 1px 1px $dark_green;
+    &:hover{
+      background-color: $dark_green;
+    }
+  }
+  &.red{
+    background-color: $red;
+    color: $white;
+    text-shadow: 1px 1px 1px $dark-red;
+    &:hover{
+      background-color: $dark-red;
+    }
+  }
+  &.yellow{
+    background-color: $yellow;
+    color: #000;
+    text-shadow: 1px 1px 1px $tangerine;
+    &:hover{
+      background-color: $tangerine;
+    }
+  }
+  &.black{
+    background-color: $black;
+    color: $white;
+    &:hover{
+      background-color: $midnight;
+    }
+  }
+}
