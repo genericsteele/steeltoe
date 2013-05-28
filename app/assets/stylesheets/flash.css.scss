@@ -3,9 +3,8 @@
 .flash{
   font-weight: bold;
   font-size: 1.3em;
-  > * {
-    padding: 10px;
-  }
+  padding-top: 10px;
+  padding-bottom: 10px;
   &.notice{
     background-color: $green;
     text-shadow: 1px 1px 1px $dark-green; 
