@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Steeltoe::VERSION
   spec.authors       = ["Eric Steele"]
   spec.email         = ["eric@notvelcro.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = "A flatter style bootstrap for simple projects"
+  spec.summary       = "I wanted better looking default styles, so I put together a better bootstrap."
+  spec.homepage      = "https://github.com/genericsteele/steeltoe"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
