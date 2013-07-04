@@ -1,0 +1,604 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+ */
+
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on May 27, 2013 04:38:23 PM America/New_York */
+@font-face {
+  font-family: 'BitterRegular';
+  src: url(/assets/Bitter-Regular-webfont.eot);
+  src: url(/assets/Bitter-Regular-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Bitter-Regular-webfont.woff) format("woff"), url(/assets/Bitter-Regular-webfont.ttf) format("truetype"), url(/assets/Bitter-Regular-webfont.svg#BitterRegular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BitterItalic';
+  src: url(/assets/Bitter-Italic-webfont.eot);
+  src: url(/assets/Bitter-Italic-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Bitter-Italic-webfont.woff) format("woff"), url(/assets/Bitter-Italic-webfont.ttf) format("truetype"), url(/assets/Bitter-Italic-webfont.svg#BitterItalic) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BitterBold';
+  src: url(/assets/Bitter-Bold-webfont.eot);
+  src: url(/assets/Bitter-Bold-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Bitter-Bold-webfont.woff) format("woff"), url(/assets/Bitter-Bold-webfont.ttf) format("truetype"), url(/assets/Bitter-Bold-webfont.svg#BitterBold) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+input[type="button"], input[type="submit"], button, a.button {
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 1.2em !important;
+  background-color: #bdc3c7;
+  border: none;
+  color: #2c3e50; }
+  input[type="button"]:hover, input[type="submit"]:hover, button:hover, a.button:hover {
+    background-color: #7f8c8d; }
+  input[type="button"].primary, input[type="submit"].primary, button.primary, a.button.primary {
+    background-color: #2980b9;
+    color: #ecf0f1; }
+    input[type="button"].primary:hover, input[type="submit"].primary:hover, button.primary:hover, a.button.primary:hover {
+      background-color: #3498db; }
+  input[type="button"].secondary, input[type="submit"].secondary, button.secondary, a.button.secondary {
+    background-color: #ecf0f1;
+    color: #34495e; }
+    input[type="button"].secondary:hover, input[type="submit"].secondary:hover, button.secondary:hover, a.button.secondary:hover {
+      background-color: #bdc3c7; }
+  input[type="button"].green, input[type="submit"].green, button.green, a.button.green {
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 1px #27ae60; }
+    input[type="button"].green:hover, input[type="submit"].green:hover, button.green:hover, a.button.green:hover {
+      background-color: #27ae60; }
+  input[type="button"].red, input[type="submit"].red, button.red, a.button.red {
+    background-color: #e74c3c;
+    color: #ecf0f1;
+    text-shadow: 1px 1px 1px #c0392b; }
+    input[type="button"].red:hover, input[type="submit"].red:hover, button.red:hover, a.button.red:hover {
+      background-color: #c0392b; }
+  input[type="button"].yellow, input[type="submit"].yellow, button.yellow, a.button.yellow {
+    background-color: #f1c40f;
+    color: #000;
+    text-shadow: 1px 1px 1px #f39c12; }
+    input[type="button"].yellow:hover, input[type="submit"].yellow:hover, button.yellow:hover, a.button.yellow:hover {
+      background-color: #f39c12; }
+  input[type="button"].black, input[type="submit"].black, button.black, a.button.black {
+    background-color: #34495e;
+    color: #ecf0f1; }
+    input[type="button"].black:hover, input[type="submit"].black:hover, button.black:hover, a.button.black:hover {
+      background-color: #2c3e50; }
+html {
+  background-color: #bdc3c7; }
+
+body {
+  font-family: "PTSansRegular";
+  font-size: 1.1em;
+  width: 960px;
+  background-color: #ecf0f1;
+  margin: 0 auto;
+  padding: 10px 0; }
+
+body > * {
+  padding: 0 40px; }
+
+strong {
+  font-family: "PTSansBold"; }
+
+em {
+  font-family: "PTSansItalic"; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "BitterRegular"; }
+  h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+    font-family: "BitterBold"; }
+  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+    font-family: "BitterItalic"; }
+
+div {
+  margin: 10px 0; }
+
+pre, code {
+  font-family: "InconsolataMedium";
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+a {
+  color: #2980b9;
+  text-decoration: none; }
+  a:visited {
+    color: #8e44ad; }
+  a:hover {
+    text-decoration: underline; }
+.flash {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .flash.notice {
+    background-color: #2ecc71;
+    text-shadow: 1px 1px 1px #27ae60;
+    color: #ecf0f1;
+    border-bottom: 2px #27ae60; }
+  .flash.alert {
+    background-color: #f1c40f;
+    text-shadow: 1px 1px 1px #f39c12;
+    border-bottom: 2px #f39c12; }
+  .flash.error {
+    background-color: #e74c3c;
+    text-shadow: 1px 1px 1px #c0392b;
+    color: white;
+    border-bottom: 2px #c0392b; }
+form {
+  padding: 0 10%; }
+  form div label {
+    display: inline-block;
+    width: 13%;
+    text-align: right;
+    font-size: 1.2em;
+    margin-right: 8px; }
+  form div input[type='text'], form div input[type='email'], form div input[type='password'], form div select, form div textarea {
+    display: inline-block;
+    margin-right: 20%;
+    width: 50%;
+    text-align: left;
+    margin: 7px 20% 7px 0;
+    font-size: 1.2em;
+    padding: 5px;
+    border: none;
+    border-radius: 7px; }
+  form div textarea {
+    min-height: 150px;
+    width: 60%; }
+  form div select {
+    border: 1px solid #bdc3c7;
+    width: 52%; }
+  form div.error {
+    color: #e74c3c; }
+    form div.error input, form div.error select, form div.error textarea {
+      border: 1px solid #e74c3c;
+      color: #e74c3c; }
+  form div.success {
+    color: #2ecc71; }
+    form div.success input, form div.success select, form div.success textarea {
+      border: 1px solid #2ecc71;
+      color: green; }
+  form div.actions {
+    margin-left: 15%;
+    text-align: left; }
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on May 12, 2013 10:49:02 PM America/New_York */
+@font-face {
+  font-family: 'InconsolataMedium';
+  src: url(/assets/Inconsolata-webfont.eot);
+  src: url(/assets/Inconsolata-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/Inconsolata-webfont.woff) format("woff"), url(/assets/Inconsolata-webfont.ttf) format("truetype"), url(/assets/Inconsolata-webfont.svg#InconsolataMedium) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on May 12, 2013 10:37:36 PM America/New_York */
+@font-face {
+  font-family: 'PTSansRegular';
+  src: url(/assets/PTS55F-webfont.eot);
+  src: url(/assets/PTS55F-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/PTS55F-webfont.woff) format("woff"), url(/assets/PTS55F-webfont.ttf) format("truetype"), url(/assets/PTS55F-webfont.svg#PTSansRegular) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PTSansItalic';
+  src: url(/assets/PTS56F-webfont.eot);
+  src: url(/assets/PTS56F-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/PTS56F-webfont.woff) format("woff"), url(/assets/PTS56F-webfont.ttf) format("truetype"), url(/assets/PTS56F-webfont.svg#PTSansItalic) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PTSansBold';
+  src: url(/assets/PTS75F-webfont.eot);
+  src: url(/assets/PTS75F-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/PTS75F-webfont.woff) format("woff"), url(/assets/PTS75F-webfont.ttf) format("truetype"), url(/assets/PTS75F-webfont.svg#PTSansBold) format("svg");
+  font-weight: normal;
+  font-style: normal; }
