@@ -3,6 +3,105 @@
     <link rel="stylesheet" media="all" href="/assets/application-01fbfa1bce85b319ef6c902f9814114e.css">
   </head>
   <body>
-    <h1>SteelToe</h1>
+    <h1>Heading 1: First Blood</h1>
+    <h2>Heading 2: Electric Boogaloo</h2>
+    <h3>Heading 3: Honey We Shrunk Ourselves!</h3>
+    <h4>Heading 4: A New Hope</h4>
+    <h5>Heading 5: The Order of the Phoenix</h5>
+    <h6>Heading 6: Rocky Balboa</h6>
+
+    <div class="flash notice">This is a Notice. I just wanted to let you know something.</div>
+    <div class="flash alert">This is an Alert. You should be aware of something.</div>
+    <div class="flash error">This is an Error. YOU'VE MADE A HUGE MISTAKE.</div>
+
+
+    <div class="buttons">
+      <input type="submit" value="Default">
+      <input type="submit" class="primary" value="Primary">
+      <input type="submit" class="secondary" value="Secondary">
+      <input type="submit" class="green" value="Green">
+      <input type="submit" class="red" value="Red">
+      <input type="submit" class="yellow" value="Yellow">
+      <input type="submit" class="black" value="Black">
+    </div>
+
+    <div>
+      <form>
+        <div class="error">
+          <label>Email</label>
+          <input type="email" placeholder="johnny@appleseed.com"/>
+        </div>
+        <div class="success">
+          <label>Password</label>
+          <input type="password" placeholder="*********" />
+        </div>
+        <div>
+          <label>Season</label>
+          <select>
+            <option>Fall</option>
+            <option>Winter</option>
+            <option>Spring</option>
+            <option>Summer</option>
+          </select>
+        </div>
+        <div>
+          <label for="content">Content</label>
+          <textarea name="content"></textarea>
+        </div>
+        <div class="actions">
+          <input type="submit" class="primary"> 
+          <a class="button secondary" href="#">Cancel</a>
+        </div>
+      </form>
+    </div>
+
+      <p>A few weeks ago, I started working on a <a href="http://whatdoitest.com/">book about testing Rails apps</a> written for those of us who struggled to understand what to actually test. The response was awesome. It showed me that I wasn&#8217;t the only one who wrestled with testing concepts. In the course of writing, I&#8217;ve been going back to the resources I used to learn up Rails in the first place to see where things went wrong. The answer is simple: <strong>I learned how to use Rspec instead of how to test</strong></p>
+
+      <p>Trying to learn testing through Rspec is like trying to learn how to play baseball from a coach that only <a href="http://www.youtube.com/watch?v=5swk95Fg1fM">speaks</a> <a href="http://en.wikipedia.org/wiki/Esperanto">Esperanto</a>. Eventually, you&#8217;ll pick up the rules, but it&#8217;s going to be much easier if you don&#8217;t have to learn Esperanto first.</p>
+
+      <p>Testing is not an easy thing to pick up and understanding all the different facets of it can take some time. Test::Unit&#8217;s familiar class syntax coupled with assertions make testing click faster than with Rspec&#8217;s magical expectations. This is just like when we advise new Rails developers to avoid using scaffolding until they really understand what&#8217;s going on behind the scenes. Magic is awesome, but only when you are comfortable with what is going on behind the curtain.</p>
+
+      <p>To demonstrate what I&#8217;m talking about, let&#8217;s have a look at a test that makes sure a title is being stripped of special characters and downcased. Here&#8217;s the test written in Rspec:</p>
+
+    <pre>
+    describe <span style='color:#0000e6; '>"Article"</span> <span style='color:#800000; font-weight:bold; '>do</span>
+      before<span style='color:#808030; '>(</span>:<span style='color:#800000; font-weight:bold; '>each</span><span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>do</span>
+        @article <span style='color:#808030; '>=</span> Article<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>new</span>
+      <span style='color:#800000; font-weight:bold; '>end</span>
+
+      it <span style='color:#0000e6; '>"should create a lower-cased, hyphenated slug from the title"</span> <span style='color:#800000; font-weight:bold; '>do</span>
+        @article<span style='color:#808030; '>.</span>title <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>"Testing with Test::Unit"</span>
+        @article<span style='color:#808030; '>.</span>slug<span style='color:#808030; '>.</span>should_not match<span style='color:#808030; '>(</span><span style='color:#808030; '>/</span><span style='color:#808030; '>[</span>^\w<span style='color:#808030; '>-</span><span style='color:#808030; '>]</span><span style='color:#808030; '>/</span><span style='color:#808030; '>)</span>
+        @article<span style='color:#808030; '>.</span>slug<span style='color:#808030; '>.</span>should_not match<span style='color:#808030; '>(</span><span style='color:#808030; '>/</span><span style='color:#808030; '>[</span>A<span style='color:#808030; '>-</span>Z<span style='color:#808030; '>]</span><span style='color:#808030; '>/</span><span style='color:#808030; '>)</span>
+      <span style='color:#800000; font-weight:bold; '>end</span>
+    <span style='color:#800000; font-weight:bold; '>end</span></pre>
+
+      <p>And here&#8217;s the same test written in Test::Unit:</p>
+
+    <pre>
+    <span style='color:#800000; font-weight:bold; '>class</span> ArticleTest &lt; Test::Unit::TestCase
+      <span style='color:#800000; font-weight:bold; '>def</span> setup
+        @article <span style='color:#808030; '>=</span> Article<span style='color:#808030; '>.</span><span style='color:#800000; font-weight:bold; '>new</span>
+      <span style='color:#800000; font-weight:bold; '>end</span>
+
+      <span style='color:#800000; font-weight:bold; '>def</span> test_slugging
+        @article<span style='color:#808030; '>.</span>title <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>"Testing with Test::Unit"</span>
+        assert_no_match <span style='color:#808030; '>/</span><span style='color:#808030; '>[</span>^\w<span style='color:#808030; '>-</span><span style='color:#808030; '>]</span><span style='color:#808030; '>/</span>, @article<span style='color:#808030; '>.</span>slug, <span style='color:#0000e6; '>"Special characters were not replaced with hyphens"</span>
+        assert_no_match <span style='color:#808030; '>/</span><span style='color:#808030; '>[</span>A<span style='color:#808030; '>-</span>Z<span style='color:#808030; '>]</span><span style='color:#808030; '>/</span>, @article<span style='color:#808030; '>.</span>slug, <span style='color:#0000e6; '>"Capital letters were not down-cased"</span>
+        assert_equal @article<span style='color:#808030; '>.</span>slug, <span style='color:#0000e6; '>"testing-with-test-unit"</span>
+      <span style='color:#800000; font-weight:bold; '>end</span>
+    <span style='color:#800000; font-weight:bold; '>end</span>
+    </pre>
+
+      <p>Just from skimming over the tests, it&#8217;s obvious that Rspec is more readable. The Rspec DSL was designed for us humans to be able to understand what is happening at a glance. This is where Rspec gets my vote. Unfortunately, we aren&#8217;t talking about reading or sharing tests. We are talking about writing tests, and this is where Rspec has a heafty learning curve.</p>
+
+      <p>Let&#8217;s take a look at the two frameworks from a different, equally important angle: the documentation. The <a href="https://www.relishapp.com/rspec/">Rspec documentation</a> is a bit rough. Before you can get started, you need to learn a pretty robust vocabulary in order to understand that you are looking to combine &#8216;expectations&#8217; with &#8216;matchers&#8217;. Once you understand that, you still need to dig a bit through <a href="https://www.relishapp.com/rspec/rspec-expectations/docs">several</a> <a href="https://www.relishapp.com/rspec/rspec-expectations/v/2-13/docs/built-in-matchers">different</a> <a href="https://github.com/rspec/rspec-expectations#rspec-expectations--">pages</a> to understand the DSL. It&#8217;s a lot of extra work for someone who is still new to testing.</p>
+
+      <p>In comparison, the <a href="http://www.ruby-doc.org/stdlib-1.9.3/libdoc/test/unit/rdoc/Test/Unit/Assertions.html">Test::Unit documenation</a> is a single ruby-doc page with thirteen methods. If you need examples or a more robust guide, the <a href="http://guides.rubyonrails.org/testing.html">Rails testing guide</a> comes flavored with Test::Unit.</p>
+
+      <p>Test::Unit has the added benefit of not requiring a new Rails developer to go through additional configuration steps. It just works with Rails out of the box, and even creates the proper declarations when you call generators. Sure, you can get the same behavior out of Rspec, but we are aiming for as little friction for new testers as possible.</p>
+
+      <p>Rspec, Minitest::Spec, Shoulda, and other spec-based testing tools are great. I started writing &#8216;What do I Test?&#8217; with Rspec as the framework of choice in mind. It&#8217;s well supported, removes a ton of friction in writing tests (if you know what you&#8217;re doing), and integrates with Rails swimmingly. What Rspec has done is fantastic, and you can&#8217;t go wrong with it once you have a handle on testing your Rails applications. I swapped the suggested first framework in the book from Rspec to Test::Unit not because it&#8217;s better, but because it&#8217;s easier to learn.</p>
+    </div>
   </body>
 </html>
