@@ -1,6 +1,10 @@
 # Steeltoe
 
-TODO: Write a gem description
+This is just a collection of common fonts and styles for bootstrapping a project. Definitely not intended for production, but who want's to look at a bunch of janky plain HTML?
+
+Looks like this:
+
+![preview](https://raw.github.com/genericsteele/steeltoe/master/preview.png)
 
 ## Installation
 
