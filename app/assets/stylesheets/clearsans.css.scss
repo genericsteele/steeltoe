@@ -1,0 +1,6 @@
+@import 'mixins';
+
+@include add-font-face('clear_sans', 'ClearSans-Regular-webfont');
+@include add-font-face('clear_sans', 'ClearSans-Bold-webfont', bold);
+@include add-font-face('clear_sans', 'ClearSans-Italic-webfont', normal, italic);
+@include add-font-face('clear_sans', 'ClearSans-BoldItalic-webfont', bold, italic);
