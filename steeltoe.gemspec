@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.description   = "A flatter style bootstrap for simple projects"
   s.summary       = "I wanted better looking default styles, so I put together a better bootstrap."
   s.homepage      = "https://github.com/genericsteele/steeltoe"
-  s.license       = ["MIT", "SIL Open Font License"]
+  s.licenses      = ["MIT", "SIL Open Font License"]
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
